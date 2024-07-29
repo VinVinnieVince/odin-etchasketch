@@ -5,9 +5,24 @@ const canvasGrid = document.createElement('div');
 canvasGrid.classList.add('canvas');
 page.appendChild(canvasGrid);
 
-function createSquare() {
+function createSquareAt(row) {
     const square = document.createElement('div');
     square.classList.add('formatSquares');
-    canvasGrid.appendChild(square);
-}
+    row.appendChild(square);
+};
 
+function createRow() {
+    const squareRow = document.createElement('div');
+    square.classList.add('formatRow');
+    canvasGrid.appendChild(squareRow);
+    return squareRow;
+};
+
+let setDimensions= 4;
+
+for (let i = 0; i < setDimensions; i++) {
+    const currentRow = createRow();
+    for (let i = 0; i < setDimensions; i++) {
+        createSquareAt(currentRow);
+    }
+};
