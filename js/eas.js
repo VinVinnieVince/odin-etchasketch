@@ -29,7 +29,17 @@ function setDimensions(num) {
     sideCount.textContent = String(num);
 }};
 
-setDimensions(16);
+const setCountBtn = document.querySelector('.setSideCount');
+setCountBtn.addEventListener ('click', () => {
+    canvasGrid.textContent = '';
+    let numSquares = prompt('How many squares per side? (Pick between 1 and 100)');
+
+    while ((numSquares < 1) || (numSquares > 100)) {
+        numSquares = prompt('Please pick a number between 1-100!');
+    }
+
+    setDimensions(numSquares);
+})
 
 let sqColor = '#000000'
 
