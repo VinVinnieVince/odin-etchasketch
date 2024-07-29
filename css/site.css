@@ -10,6 +10,8 @@
 }
 
 .canvas {
+    display: flex;
+    flex-flow: column;
     background-color: white;
     border: 5px solid black;
     border-radius: 20px;
@@ -17,14 +19,16 @@
     aspect-ratio: 1 / 1;
 }
 
-.formatSquares {
-    box-sizing: border-box;
-    margin: 0;
-    border: 2px solid black;
-}
-
 .formatRow {
     box-sizing: border-box;
     display: flex;
     margin: 0;
+    flex: auto;
+}
+
+.formatSquares {
+    box-sizing: border-box;
+    margin: 0;
+    border: 2px solid black;
+    flex: auto;
 }
