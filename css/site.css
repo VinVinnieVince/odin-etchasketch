@@ -10,8 +10,6 @@
 }
 
 .canvas {
-    display: flex;
-    flex-flow: row wrap;
     background-color: white;
     border: 5px solid black;
     border-radius: 20px;
@@ -22,5 +20,11 @@
 .formatSquares {
     box-sizing: border-box;
     margin: 0;
-    border: 2px;
+    border: 2px solid black;
+}
+
+.formatRow {
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
 }
