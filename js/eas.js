@@ -24,6 +24,9 @@ function setDimensions(num) {
         for (let i = 0; i < num; i++) {
             createSquareAt(currentRow);
         }
+    
+    const sideCount = document.querySelector('.sideCount');
+    sideCount.textContent = String(num);
 }};
 
 setDimensions(16);
