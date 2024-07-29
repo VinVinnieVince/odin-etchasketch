@@ -18,14 +18,15 @@ function createRow() {
     return squareRow;
 };
 
-let setDimensions= 4;
+function setDimensions(num) {
+    for (let i = 0; i < num; i++) {
+        const currentRow = createRow();
+        for (let i = 0; i < num; i++) {
+            createSquareAt(currentRow);
+        }
+}};
 
-for (let i = 0; i < setDimensions; i++) {
-    const currentRow = createRow();
-    for (let i = 0; i < setDimensions; i++) {
-        createSquareAt(currentRow);
-    }
-};
+setDimensions(16);
 
 let sqColor = '#000000'
 
