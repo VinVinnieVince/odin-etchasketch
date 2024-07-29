@@ -1,6 +1,6 @@
 // eas - Etch-A-Sketch
 
-const page = document.querySelector('.pageContainer');
+const page = document.querySelector('.canvasWrapper');
 const canvasGrid = document.createElement('div');
 canvasGrid.classList.add('canvas');
 page.appendChild(canvasGrid);
