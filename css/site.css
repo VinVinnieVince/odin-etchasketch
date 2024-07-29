@@ -1,6 +1,6 @@
 /* to do - body formatting (center) and remove square positioning */
 
-.pageContainer {
+.canvasWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
