@@ -13,7 +13,7 @@ function createSquareAt(row) {
 
 function createRow() {
     const squareRow = document.createElement('div');
-    square.classList.add('formatRow');
+    squareRow.classList.add('formatRow');
     canvasGrid.appendChild(squareRow);
     return squareRow;
 };
