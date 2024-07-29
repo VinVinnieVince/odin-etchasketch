@@ -45,8 +45,8 @@ setCountBtn.addEventListener ('click', () => {
     setDimensions(numSquares);
 })
 
-const defaultLength = 16;
-setDimensions(defaultLength);
+// To provide some starter length when page is first loaded
+setDimensions(16);
 
 let sqColor = '#000000'
 
