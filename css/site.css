@@ -1,12 +1,18 @@
 /* to do - body formatting (center) and remove square positioning */
-
 .canvasWrapper {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
     position: absolute;
+}
+
+.sideCountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .canvas {
