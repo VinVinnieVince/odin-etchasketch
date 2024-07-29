@@ -7,6 +7,7 @@ page.appendChild(canvasGrid);
 
 function createSquare() {
     const square = document.createElement('div');
-    square.classList.add('removePositioning');
+    square.classList.add('formatSquares');
     canvasGrid.appendChild(square);
 }
+
