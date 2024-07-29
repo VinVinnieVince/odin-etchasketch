@@ -8,6 +8,10 @@ page.appendChild(canvasGrid);
 function createSquareAt(row) {
     const square = document.createElement('div');
     square.classList.add('formatSquares');
+
+    square.addEventListener('mouseenter', () => {
+        square.style.backgroundColor = sqColor;
+    });
     row.appendChild(square);
 };
 
@@ -40,6 +44,9 @@ setCountBtn.addEventListener ('click', () => {
 
     setDimensions(numSquares);
 })
+
+const defaultLength = 16;
+setDimensions(defaultLength);
 
 let sqColor = '#000000'
 
