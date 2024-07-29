@@ -1,0 +1,18 @@
+/* to do - body formatting (center) and remove square positioning */
+
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.canvas {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+}
