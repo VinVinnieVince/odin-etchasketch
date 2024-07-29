@@ -26,3 +26,12 @@ for (let i = 0; i < setDimensions; i++) {
         createSquareAt(currentRow);
     }
 };
+
+let sqColor = '#000000'
+
+const allSquares = document.querySelectorAll('.formatSquares');
+allSquares.forEach((squ) => {
+    squ.addEventListener('mouseenter', () => {
+        squ.style.backgroundColor = sqColor;
+    });
+});
