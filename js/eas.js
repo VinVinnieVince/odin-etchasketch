@@ -48,13 +48,9 @@ setCountBtn.addEventListener ('click', () => {
 // To provide starter length when page first loaded
 setDimensions(16);
 
+const allSquares = document.querySelectorAll('.formatSquares');
+
 function setColor(color) {
-    const allSquares = document.querySelectorAll('.formatSquares');
-    if (confirm('Warning! This will clear canvas. Proceed?')) {
-        allSquares.forEach((squ) => {
-                squ.style.backgroundColor = '#FFFFFF'
-        });
-    }
     allSquares.forEach((squ) => {
         squ.addEventListener('mouseenter', () => {
             squ.style.backgroundColor = color;
@@ -62,4 +58,14 @@ function setColor(color) {
     });
 };
 
+function clearCanvas() {
+    if (confirm('Warning! This will clear canvas. Proceed?')) {
+        allSquares.forEach((squ) => {
+                squ.style.backgroundColor = '#FFFFFF'
+        });
+    }
+}
+
 setColor('#000000');
+const black = document.querySelector('.black');
+black.addEventListener('click', setColor('#000000'));
