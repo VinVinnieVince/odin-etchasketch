@@ -58,6 +58,9 @@ function setColor(color) {
     });
 };
 
+// Code from: https://stackoverflow.com/questions/1484506/random-color-generator
+function randomClr() { return "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0")}
+
 function clearCanvas() {
     if (confirm('Warning! This will clear canvas. Proceed?')) {
         allSquares.forEach((squ) => {
