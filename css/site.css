@@ -1,12 +1,26 @@
+.eleWrapper {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 50px;
+}
+
+.colorWrapper {
+    display: flex;
+    flex-flow: column;
+    flex: initial;
+    justify-content: center;
+}
+
 .canvasWrapper {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
     gap: 20px;
+    flex: initial;
 }
 
 .sideCountContainer {
