@@ -50,14 +50,16 @@ setDimensions(16);
 
 function setColor(color) {
     const allSquares = document.querySelectorAll('.formatSquares');
+    if (confirm('Warning! This will clear canvas. Proceed?')) {
+        allSquares.forEach((squ) => {
+                squ.style.backgroundColor = '#FFFFFF'
+        });
+    }
     allSquares.forEach((squ) => {
-        if (confirm('Warning! This will clear canvas. Proceed?')) {
-            squ.style.backgroundColor = '#FFFFFF'
-        }
         squ.addEventListener('mouseenter', () => {
             squ.style.backgroundColor = color;
         });
     });
-}
+};
 
 setColor('#000000');
