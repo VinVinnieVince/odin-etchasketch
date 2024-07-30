@@ -64,15 +64,6 @@ function setColor(color) {
 // Code from: https://stackoverflow.com/questions/1484506/random-color-generator
 function randomClr() { return "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0")}
 
-function clearCanvas() {
-    const allSquares = document.querySelectorAll('.formatSquares');
-    if (confirm('Warning! This will clear canvas. Proceed?')) {
-        allSquares.forEach((squ) => {
-                squ.style.backgroundColor = '#FFFFFF'
-        });
-    };
-};
-
 setColor('#000000');
 const black = document.querySelector('.black');
 black.addEventListener('click', () => {
@@ -88,3 +79,16 @@ rb.addEventListener('click', () => {
             });
         });
     });
+
+function clearCanvas() {
+    const allSquares = document.querySelectorAll('.formatSquares');
+    if (confirm('Warning! This will clear canvas. Proceed?')) {
+        allSquares.forEach((squ) => {
+                squ.style.opacity = '0';
+                squ.style.backgroundColor = '#FFFFFF'
+        });
+    };
+};
+
+const clrBtn = document.querySelector('.clearBtn');
+clrBtn.addEventListener('click', clearCanvas);
