@@ -50,9 +50,9 @@ setCountBtn.addEventListener ('click', () => {
     setDimensions(numSquares);
 });
 
-const allSquares = document.querySelectorAll('.formatSquares');
 
 function setColor(color) {
+    const allSquares = document.querySelectorAll('.formatSquares');
     allSquares.forEach((squ) => {
         squ.addEventListener('mouseenter', () => {
             squ.style.backgroundColor = color;
@@ -65,6 +65,7 @@ function setColor(color) {
 function randomClr() { return "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0")}
 
 function clearCanvas() {
+    const allSquares = document.querySelectorAll('.formatSquares');
     if (confirm('Warning! This will clear canvas. Proceed?')) {
         allSquares.forEach((squ) => {
                 squ.style.backgroundColor = '#FFFFFF'
@@ -80,6 +81,7 @@ black.addEventListener('click', () => {
 
 const rb = document.querySelector('.rainbow');
 rb.addEventListener('click', () => {
+    const allSquares = document.querySelectorAll('.formatSquares');
     allSquares.forEach((squ) => {
         squ.addEventListener('mouseenter', () => {
             squ.style.backgroundColor = randomClr();
