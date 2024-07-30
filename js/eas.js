@@ -10,7 +10,7 @@ function createSquareAt(row) {
     square.classList.add('formatSquares');
 
     square.addEventListener('mouseenter', () => {
-        square.style.backgroundColor = sqColor;
+        square.style.backgroundColor = '#000000';
     });
     row.appendChild(square);
 };
@@ -33,6 +33,9 @@ function setDimensions(num) {
     sideCount.textContent = String(num);
 }};
 
+// To provide starter length when page first loaded
+setDimensions(16);
+
 const setCountBtn = document.querySelector('.setSideCount');
 setCountBtn.addEventListener ('click', () => {
     canvasGrid.textContent = '';
@@ -44,9 +47,6 @@ setCountBtn.addEventListener ('click', () => {
 
     setDimensions(numSquares);
 })
-
-// To provide starter length when page first loaded
-setDimensions(16);
 
 const allSquares = document.querySelectorAll('.formatSquares');
 
@@ -71,4 +71,6 @@ function clearCanvas() {
 
 setColor('#000000');
 const black = document.querySelector('.black');
-black.addEventListener('click', setColor('#000000'));
+black.addEventListener('click', () => {
+    setColor('#000000');
+});
