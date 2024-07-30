@@ -14,6 +14,10 @@
     justify-content: center;
 }
 
+.clearBtn {
+    margin: 30px 0;
+}
+
 .canvasWrapper {
     display: flex;
     flex-flow: column;
