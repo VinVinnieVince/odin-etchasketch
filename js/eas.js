@@ -8,9 +8,11 @@ canvasWrap.appendChild(canvasGrid);
 function createSquareAt(row) {
     const square = document.createElement('div');
     square.classList.add('formatSquares');
+    square.style.opacity = '0';
 
     square.addEventListener('mouseenter', () => {
         square.style.backgroundColor = '#000000';
+        square.style.opacity = String(Number(square.style.opacity) + 0.1);
     });
     row.appendChild(square);
 };
@@ -27,7 +29,7 @@ function setDimensions(num) {
         const currentRow = createRow();
         for (let i = 0; i < num; i++) {
             createSquareAt(currentRow);
-        }
+        };
     
     const sideCount = document.querySelector('.sideCount');
     sideCount.textContent = String(num);
@@ -43,10 +45,10 @@ setCountBtn.addEventListener ('click', () => {
 
     while ((numSquares < 1) || (numSquares > 100)) {
         numSquares = prompt('Please pick a number between 1-100!');
-    }
+    };
 
     setDimensions(numSquares);
-})
+});
 
 const allSquares = document.querySelectorAll('.formatSquares');
 
@@ -54,6 +56,7 @@ function setColor(color) {
     allSquares.forEach((squ) => {
         squ.addEventListener('mouseenter', () => {
             squ.style.backgroundColor = color;
+            squ.style.opacity = String(Number(squ.style.opacity) + 0.1);
             });
         });
 };
@@ -66,8 +69,8 @@ function clearCanvas() {
         allSquares.forEach((squ) => {
                 squ.style.backgroundColor = '#FFFFFF'
         });
-    }
-}
+    };
+};
 
 setColor('#000000');
 const black = document.querySelector('.black');
