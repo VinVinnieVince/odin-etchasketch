@@ -45,14 +45,19 @@ setCountBtn.addEventListener ('click', () => {
     setDimensions(numSquares);
 })
 
-// To provide some starter length when page is first loaded
+// To provide starter length when page first loaded
 setDimensions(16);
 
-let sqColor = '#000000'
-
-const allSquares = document.querySelectorAll('.formatSquares');
-allSquares.forEach((squ) => {
-    squ.addEventListener('mouseenter', () => {
-        squ.style.backgroundColor = sqColor;
+function setColor(color) {
+    const allSquares = document.querySelectorAll('.formatSquares');
+    allSquares.forEach((squ) => {
+        if (confirm('Warning! This will clear canvas. Proceed?')) {
+            squ.style.backgroundColor = '#FFFFFF'
+        }
+        squ.addEventListener('mouseenter', () => {
+            squ.style.backgroundColor = color;
+        });
     });
-});
+}
+
+setColor('#000000');
