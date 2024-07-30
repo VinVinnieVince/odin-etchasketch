@@ -54,12 +54,8 @@ function setColor(color) {
     allSquares.forEach((squ) => {
         squ.addEventListener('mouseenter', () => {
             squ.style.backgroundColor = color;
-            const blue = document.querySelector('.blue');
-            blue.addEventListener('click', () => {
-                setColor('#3366ff');
-            })
+            });
         });
-    });
 };
 
 // Code from: https://stackoverflow.com/questions/1484506/random-color-generator
@@ -78,3 +74,12 @@ const black = document.querySelector('.black');
 black.addEventListener('click', () => {
     setColor('#000000');
 });
+
+const rb = document.querySelector('.rainbow');
+rb.addEventListener('click', () => {
+    allSquares.forEach((squ) => {
+        squ.addEventListener('mouseenter', () => {
+            squ.style.backgroundColor = randomClr();
+            });
+        });
+    });
