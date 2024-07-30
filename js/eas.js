@@ -1,9 +1,9 @@
 // eas - Etch-A-Sketch
 
-const page = document.querySelector('.canvasWrapper');
+const canvasWrap = document.querySelector('.canvasWrapper');
 const canvasGrid = document.createElement('div');
 canvasGrid.classList.add('canvas');
-page.appendChild(canvasGrid);
+canvasWrap.appendChild(canvasGrid);
 
 function createSquareAt(row) {
     const square = document.createElement('div');
@@ -54,6 +54,10 @@ function setColor(color) {
     allSquares.forEach((squ) => {
         squ.addEventListener('mouseenter', () => {
             squ.style.backgroundColor = color;
+            const blue = document.querySelector('.blue');
+            blue.addEventListener('click', () => {
+                setColor('#3366ff');
+            })
         });
     });
 };
